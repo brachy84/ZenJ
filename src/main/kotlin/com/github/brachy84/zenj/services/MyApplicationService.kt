@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.brachy84.zenj.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.brachy84.zenj.MyBundle
 
 class MyApplicationService {
 
