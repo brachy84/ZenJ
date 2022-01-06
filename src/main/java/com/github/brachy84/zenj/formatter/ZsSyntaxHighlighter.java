@@ -84,6 +84,7 @@ public class ZsSyntaxHighlighter extends SyntaxHighlighterBase {
         putSingle(ZsTypes.COMMA, COMMA);
         putSingle(ZsTypes.SEMICOLON, SEMICOLON);
         putSingle(ZsTypes.PREPROCESSOR_STATEMENT, PREPROCESSOR);
+        putSingle(ZsTypes.CLASS_NAME, CLASS_NAME);
     }
 
 
