@@ -8,12 +8,18 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.brachy84.zenj.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.brachy84.zenj.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.brachy84.zenj.services.ZenApplicationService"/>
+        <projectService serviceImplementation="com.github.brachy84.zenj.services.ZenProjectService"/>
+        <fileType name="ZenScript File" implementationClass="com.github.brachy84.zenj.lang.ZsFileType"
+                  fieldName="INSTANCE" language="ZenScript" extensions="zs"/>
+        <lang.parserDefinition language="ZenScript" implementationClass="com.github.brachy84.zenj.parsing.ZsParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="ZenScript" implementationClass="com.github.brachy84.zenj.formatter.ZsHighlighterFactory"/>
+        <colorSettingsPage implementation="com.github.brachy84.zenj.formatter.ZsColorSettings"/>
+        <completion.contributor language="ZenScript" implementationClass="com.github.brachy84.zenj.completion.ZsCompletion"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.brachy84.zenj.listeners.MyProjectManagerListener"
+        <listener class="com.github.brachy84.zenj.listeners.ZenProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
